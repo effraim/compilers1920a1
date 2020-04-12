@@ -7,23 +7,15 @@
 """
 
 
-transitions = { 
-
-	# (Α) Συμπληρώστε τον πίνακα μεταβάσεων ως λεξικό (dictionary).
-	# Η αρχική κατάσταση πρέπει να ονομάζεται 's0'.
-	# Για λεπτομέρειες δείτε στο:
-	# http://mixstef.github.io/courses/compilers/lecturedoc/unit1/module1.html#id7
-
+transitions = { "s0" : {"DIGIT" : "s1"},
+	        "s1" : {"DIGIT" : "s0", "." : "s2"},
+	        "s2" : {"DIGIT" : "s3"},
+	        "s3" : {"DIGIT" : "s3"}
      	      } 
 
 
 accepts = { 
-
-	# (Β) Συμπληρώστε το λεξικό των καταστάσεων αποδοχής και των
-	# αντίστοιχων επιστρεφόμενων συμβόλων (tokens)
-	# Για λεπτομέρειες δείτε στο:
-	# http://mixstef.github.io/courses/compilers/lecturedoc/unit1/module1.html#id8
-
+	   "s3" : "FLOAT_TOKEN"
      	  }
 
 
