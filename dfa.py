@@ -7,8 +7,8 @@
 """
 
 
-transitions = { "s0" : {"DIGIT" : "s1"},
-	        "s1" : {"DIGIT" : "s0", "." : "s2"},
+transitions = { "s0" : {"DIGIT" : "s1", "." : "s2"},
+	        "s1" : {"DIGIT" : "s1", "." : "s3"},
 	        "s2" : {"DIGIT" : "s3"},
 	        "s3" : {"DIGIT" : "s3"}
      	      } 
